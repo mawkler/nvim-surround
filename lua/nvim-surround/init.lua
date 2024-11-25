@@ -53,7 +53,7 @@ M.normal_surround = function(args)
     -- Call the operatorfunc if it has not been called yet
     if not args.selection then
         -- Clear the normal cache (since it was user-called)
-        cache.normal = { line_mode = args.line_mode }
+        cache.normal = { delimiters = nil, line_mode = args.line_mode }
         M.normal_curpos = buffer.get_curpos()
         M.pending_surround = true
 
